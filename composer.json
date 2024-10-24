@@ -1,18 +1,12 @@
 {
-    "name": "webbycrown/blog-for-bagisto",
-    "description": "Blog for Bagisto",
+    "name": "alethainc/blog-for-bagisto",
+    "description": "Blog for Bagisto Fork",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
             "name": "WebbyCrown Solutions",
             "email": "info@webbycrown.com"
-        }
-    ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/alethainc/blog-for-bagisto"
         }
     ],
     "require": {
@@ -27,9 +21,14 @@
         "laravel": {
             "providers": [
                 "Webbycrown\\BlogBagisto\\Providers\\BlogServiceProvider"
-            ],
-            "aliases": {}
+            ]
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/alethainc/blog-for-bagisto"
+        }
+    ]
 }
