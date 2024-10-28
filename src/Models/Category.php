@@ -135,4 +135,9 @@ class Category extends Model implements CategoryContract
         return $assign_blogs;
     }
 
+    public function posts()
+{
+    return $this->hasMany(Blog::class, 'category_id');
+}
+
 }
