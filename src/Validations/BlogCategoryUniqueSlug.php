@@ -115,6 +115,12 @@ class BlogCategoryUniqueSlug implements Rule
     protected function isSlugExistsInProducts($slug)
     {
         $attribute = app(AttributeRepository::class)->findOneByField('code', 'url_key');
+             // Null check for the attribute
+        if (! $attribute) {
+            // Handle the case when the attribute is not found
+            // For example, return false or throw an exception
+            return false;
+            }
 
         return ! app(ProductAttributeValueRepository::class)->isValueUnique(
             $this->id,
