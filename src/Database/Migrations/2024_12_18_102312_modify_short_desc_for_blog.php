@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::table('blogs', function (Blueprint $table) {
             // Double the length of the 'short_description' column
-            $table->string('short_description', 510)->change();
+            $table->string('short_description', 2000)->change();
         });
     }
 
