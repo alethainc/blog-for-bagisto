@@ -1,3 +1,5 @@
+<?php
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -11,9 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        // Modify the 'short_description' column to double its length
         Schema::table('blogs', function (Blueprint $table) {
-            // Assuming the current length is 255 (default for string), we double it to 510
+            // Double the length of the 'short_description' column
             $table->string('short_description', 510)->change();
         });
     }
@@ -25,8 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        // Revert the 'short_description' column to its original length (255)
         Schema::table('blogs', function (Blueprint $table) {
+            // Revert the 'short_description' column to its original length (255)
             $table->string('short_description', 255)->change();
         });
     }
